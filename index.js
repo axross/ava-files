@@ -257,7 +257,7 @@ function handlePaths(files, excludePatterns, globOptions) {
 		})
 		.then(flatten)
 		.filter(function (file) {
-			return file && path.extname(file) === '.js' && path.basename(file)[0] !== '_';
+			return file && path.basename(file)[0] !== '_';
 		})
 		.map(function (file) {
 			return path.resolve(file);
